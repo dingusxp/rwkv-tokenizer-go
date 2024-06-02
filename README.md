@@ -8,7 +8,6 @@ a tokenizer with `NewWorldTokenizer()`.
 ## Example Usage
 
 ```go
-
 package main
 
 import (
