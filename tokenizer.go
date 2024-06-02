@@ -255,6 +255,6 @@ func (t *Tokenizer) IDToToken(id int) (string, error) {
 	if token, ok := t.i2t[id]; ok {
 		return token, nil
 	} else {
-		return "", ErrCannotTokenize
+		return "", ErrUnknownToken
 	}
 }
