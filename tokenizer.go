@@ -103,7 +103,6 @@ func NewTokenizerFromReader(r io.Reader) (*Tokenizer, error) {
 
 		sl, sr := strings.IndexByte(line, ' '), strings.LastIndexByte(line, ' ')
 		if sl == sr || sr == len(line)-1 {
-			println(line, sl, sr)
 			return nil, ErrMalformedVocabulary
 		}
 
