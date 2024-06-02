@@ -96,7 +96,7 @@ func NewTokenizerFromReader(r io.Reader) (*Tokenizer, error) {
 			return nil, err
 		}
 
-		line = strings.Trim(line, " \v\t\r\n")
+		line = strings.TrimSpace(line)
 		if line == "" || line[0] == '#' {
 			continue
 		}
@@ -111,7 +111,7 @@ func NewTokenizerFromReader(r io.Reader) (*Tokenizer, error) {
 			return nil, err
 		}
 
-		tokLit := strings.Trim(line[sl:sr], " \v\t\r\n")
+		tokLit := strings.TrimSpace(line[sl:sr])
 		tokIsByt := len(tokLit) > 0 && tokLit[0] == 'b'
 		if tokIsByt {
 			tokLit = tokLit[1:]
