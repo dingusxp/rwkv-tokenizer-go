@@ -1,5 +1,7 @@
 # RWKV Tokenizer for Go
 
+[![Go Reference](https://pkg.go.dev/badge/github.com/ronsor/rwkv-tokenizer-go.svg)](https://pkg.go.dev/github.com/ronsor/rwkv-tokenizer-go)
+
 This package is a fast implementation of the RWKV World Tokenizer in Go.
 
 The default vocabulary (`rwkv_vocab_v20230424`) is loaded when you create
