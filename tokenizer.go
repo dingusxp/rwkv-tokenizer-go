@@ -241,3 +241,21 @@ func (t *Tokenizer) DecodeToString(tokens []int) (text string, err error) {
 	text = b.String()
 	return
 }
+
+// TokenToID returns the ID of the specified token.
+func (t *Tokenizer) TokenToID(token string) (int, error) {
+	if id, ok := t.t2i[token]; ok {
+		return id, nil
+	} else {
+		return -1, ErrCannotTokenize
+	}
+}
+
+// IDToToken returns the token for the given ID.
+func (t *Tokenizer) IDToToken(id int) (string, error) {
+	if token, ok := t.i2t[id]; ok {
+		return token, nil
+	} else {
+		return "", ErrCannotTokenize
+	}
+}
