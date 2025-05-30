@@ -227,7 +227,7 @@ func (t *Tokenizer) Decode(tokens []int) (data []byte, err error) {
 	return
 }
 
-// Decode decodes an int slice of tokens to a string.
+// DecodeToString decodes an int slice of tokens to a string.
 func (t *Tokenizer) DecodeToString(tokens []int) (text string, err error) {
 	var b strings.Builder
 	for _, v := range tokens {
